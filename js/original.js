@@ -71,7 +71,7 @@ const personalMovieDB = {
 		if (!this.privat) {
 			console.log('main object: ', this);
 		} else {
-			console.log('this is private information: ');
+			console.log('this is private information!');
 		}
 	},
 
@@ -95,6 +95,10 @@ const personalMovieDB = {
 			this.genres[countOfAnswers-1] = genre;
 			countOfAnswers++;
 		} while (countOfAnswers <= numberOfQuestions)
+			
+		this.genres.forEach(function(item, index, arr) {
+			console.log(`Любимый жанр #${index+1} - это ${item}`);
+		});
 		
 	},
 
@@ -106,14 +110,14 @@ const personalMovieDB = {
 
 };
 
-personalMovieDB.start();
-personalMovieDB.rememberMyFilms();
-personalMovieDB.detectPersonalLevel();
+//personalMovieDB.start();
+//personalMovieDB.rememberMyFilms();
+//personalMovieDB.detectPersonalLevel();
 personalMovieDB.writeYourGenres();
 
-personalMovieDB.showMyDB();
-personalMovieDB.toggleVisibleMyDB();
-personalMovieDB.showMyDB();
+//personalMovieDB.showMyDB();
+//personalMovieDB.toggleVisibleMyDB();
+//personalMovieDB.showMyDB();
 
 //console.log('personalMovieDB: ', personalMovieDB);
 
